@@ -1,0 +1,28 @@
+{
+  "entryPoints": [
+    "src/cvv.ts",
+    "src/expiry.ts",
+    "src/hash.ts",
+    "src/masking.ts",
+    "src/pan.ts",
+    "src/storage.ts",
+    "src/types.ts",
+    "src/index.ts"
+  ],
+  "tsconfig": "./tsconfig.json",
+  "readme": "README.md",
+  "plugin": [
+    "@clean-jsdoc-theme/typedoc"
+  ],
+  "outputs": [
+    {
+      "name": "clean-jsdoc-theme",
+      "path": "docs"
+    }
+  ],
+  "cleanJsdocTheme": {
+    "siteName": "EarnMore",
+    "clubSidebarItems": true,
+    "footer": "<style>[data-island='theme-toggle'] { display: none !important; } p:has(+ p img[alt='PCI-DSS']) { text-align: center !important; } p:has(img[alt='PCI-DSS']) { display: flex; flex-direction: row; justify-content: center; align-items: center; gap: 16px; flex-wrap: wrap; margin-top: 0 !important; } img[alt='PCI-DSS'] { height: 72px !important; width: auto !important; margin: 0 !important; } img[alt='EMVCo'] { height: 88px !important; width: auto !important; margin: 0 !important; } img[alt='NIST'], img[alt='GDPR'], img[alt='HIPAA'] { height: 80px !important; width: auto !important; margin: 0 !important; }</style><script>document.documentElement.dataset.theme = 'light'; localStorage.setItem('theme', 'light');</script>"
+  }
+}
