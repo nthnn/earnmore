@@ -1,0 +1,384 @@
+<!doctype html><html lang="en" data-scrollbar="styled"><head><meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" /><meta name="generator" content="clean-jsdoc-theme 5.1.1" /><title>index.ts | EarnMore</title><script>(function(){try{var d=document.documentElement;var t=localStorage.getItem('theme');if(t==='dark'){d.dataset.theme='dark'}else{d.dataset.theme='light'}var fs=localStorage.getItem('clean-font-size');if(fs==='sm'){d.style.fontSize='15px'}else if(fs==='lg'){d.style.fontSize='18px'}var ls=localStorage.getItem('clean-line-spacing');if(ls==='compact'){d.style.setProperty('--clean-line-height','1.4')}else if(ls==='relaxed'){d.style.setProperty('--clean-line-height','1.8')}}catch(_){}}());</script><link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@400;500;600;700&amp;family=Roboto:wght@400;500;600;700&amp;display=swap" /><link rel="stylesheet" href="/_assets/styles.mskmqy6o-e384ac7b.css" /></head><body><div class="flex min-h-screen flex-col bg-background text-(--clean-fg)"><header class="sticky top-0 z-30 border-b border-(--clean-border) bg-background"><div class="mx-auto flex h-16 w-full min-w-0 max-w-screen-2xl items-center gap-4 px-4"><a href="/" class="flex min-w-0 items-center pl-3 no-underline"><span class="truncate text-lg font-heading font-bold text-(--clean-fg)">EarnMore</span></a><span class="shrink-0 rounded bg-(--clean-bg-muted) px-2 py-0.5 text-xs text-muted-foreground">v1.0.0</span><div class="ml-auto flex shrink-0 items-center gap-1"><div class="flex items-center gap-1"><div data-island="cmdk" data-island-id="i1"><button class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 text-muted-foreground hover:bg-accent hover:text-accent-foreground h-9 w-9" type="button" aria-haspopup="dialog" aria-expanded="false" aria-label="Search" title="Search (Ctrl K)"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-search" aria-hidden="true"><path d="m21 21-4.34-4.34"></path><circle cx="11" cy="11" r="8"></circle></svg></button></div></div><div class="hidden items-center gap-1 md:flex"><div data-island="theme-toggle" data-island-id="i2"><button class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 text-muted-foreground hover:bg-accent hover:text-accent-foreground h-9 w-9" type="button" aria-label="Switch to dark theme" title="Toggle theme"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-sun" aria-hidden="true"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2"></path><path d="M12 20v2"></path><path d="m4.93 4.93 1.41 1.41"></path><path d="m17.66 17.66 1.41 1.41"></path><path d="M2 12h2"></path><path d="M20 12h2"></path><path d="m6.34 17.66-1.41 1.41"></path><path d="m19.07 4.93-1.41 1.41"></path></svg></button></div><div data-island="settings" data-island-id="i3"><button class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 text-muted-foreground hover:bg-accent hover:text-accent-foreground h-9 w-9" type="button" aria-haspopup="dialog" aria-expanded="false" aria-label="Settings" title="Settings"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-settings" aria-hidden="true"><path d="M9.671 4.136a2.34 2.34 0 0 1 4.659 0 2.34 2.34 0 0 0 3.319 1.915 2.34 2.34 0 0 1 2.33 4.033 2.34 2.34 0 0 0 0 3.831 2.34 2.34 0 0 1-2.33 4.033 2.34 2.34 0 0 0-3.319 1.915 2.34 2.34 0 0 1-4.659 0 2.34 2.34 0 0 0-3.32-1.915 2.34 2.34 0 0 1-2.33-4.033 2.34 2.34 0 0 0 0-3.831A2.34 2.34 0 0 1 6.35 6.051a2.34 2.34 0 0 0 3.319-1.915"></path><circle cx="12" cy="12" r="3"></circle></svg></button></div></div><div class="md:hidden"><div data-island="mobile-nav" data-island-id="i4"><button class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 text-muted-foreground hover:bg-accent hover:text-accent-foreground h-9 w-9" type="button" aria-haspopup="dialog" aria-expanded="false" aria-label="Open navigation" title="Menu"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-panel-right" aria-hidden="true"><rect width="18" height="18" x="3" y="3" rx="2"></rect><path d="M15 3v18"></path></svg></button></div></div></div></div></header><div class="mx-auto grid w-full max-w-screen-2xl flex-1 grid-cols-1 gap-6 px-4 py-6 md:grid-cols-[16rem_minmax(0,1fr)]"><aside class="hidden md:block"><div class="sticky overflow-y-auto [scrollbar-gutter:stable] pr-2 top-20 max-h-[calc(100vh-6rem)]"><div data-island="sidebar" data-island-id="i5"><nav aria-label="Documentation navigation" class="text-(--clean-fg)"><div class="mt-4 first:mt-0"><ul class="m-0 list-none p-0"><li class="my-0.5"><a href="/" class="group flex items-start gap-x-3 w-full px-3 py-1.5 text-left text-sm no-underline break-words hyphens-auto overflow-hidden rounded-xl outline-offset-[-1px] cursor-pointer text-[var(--clean-fg)] hover:bg-[var(--clean-bg-muted)]"><span class="min-w-0 wrap-break-words">Home</span></a></li><li class="my-0.5"><div class="flex items-center gap-x-1"><a href="/module/cvv" class="group flex items-start gap-x-3 w-full px-3 py-1.5 text-left text-sm no-underline break-words hyphens-auto overflow-hidden rounded-xl outline-offset-[-1px] cursor-pointer text-[var(--clean-fg)] hover:bg-[var(--clean-bg-muted)]"><span class="min-w-0 wrap-break-words">cvv</span></a><button type="button" aria-expanded="false" aria-label="cvv" class="flex shrink-0 items-center rounded-xl p-1.5 outline-offset-[-1px] cursor-pointer hover:bg-[var(--clean-bg-muted)]"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right shrink-0 transition-transform" aria-hidden="true"><path d="m9 18 6-6-6-6"></path></svg></button></div></li><li class="my-0.5"><div class="flex items-center gap-x-1"><a href="/module/expiry" class="group flex items-start gap-x-3 w-full px-3 py-1.5 text-left text-sm no-underline break-words hyphens-auto overflow-hidden rounded-xl outline-offset-[-1px] cursor-pointer text-[var(--clean-fg)] hover:bg-[var(--clean-bg-muted)]"><span class="min-w-0 wrap-break-words">expiry</span></a><button type="button" aria-expanded="false" aria-label="expiry" class="flex shrink-0 items-center rounded-xl p-1.5 outline-offset-[-1px] cursor-pointer hover:bg-[var(--clean-bg-muted)]"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right shrink-0 transition-transform" aria-hidden="true"><path d="m9 18 6-6-6-6"></path></svg></button></div></li><li class="my-0.5"><div class="flex items-center gap-x-1"><a href="/module/hash" class="group flex items-start gap-x-3 w-full px-3 py-1.5 text-left text-sm no-underline break-words hyphens-auto overflow-hidden rounded-xl outline-offset-[-1px] cursor-pointer text-[var(--clean-fg)] hover:bg-[var(--clean-bg-muted)]"><span class="min-w-0 wrap-break-words">hash</span></a><button type="button" aria-expanded="false" aria-label="hash" class="flex shrink-0 items-center rounded-xl p-1.5 outline-offset-[-1px] cursor-pointer hover:bg-[var(--clean-bg-muted)]"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right shrink-0 transition-transform" aria-hidden="true"><path d="m9 18 6-6-6-6"></path></svg></button></div></li><li class="my-0.5"><div class="flex items-center gap-x-1"><a href="/module/index" class="group flex items-start gap-x-3 w-full px-3 py-1.5 text-left text-sm no-underline break-words hyphens-auto overflow-hidden rounded-xl outline-offset-[-1px] cursor-pointer text-[var(--clean-fg)] hover:bg-[var(--clean-bg-muted)]"><span class="min-w-0 wrap-break-words">index</span></a><button type="button" aria-expanded="false" aria-label="index" class="flex shrink-0 items-center rounded-xl p-1.5 outline-offset-[-1px] cursor-pointer hover:bg-[var(--clean-bg-muted)]"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right shrink-0 transition-transform" aria-hidden="true"><path d="m9 18 6-6-6-6"></path></svg></button></div></li><li class="my-0.5"><div class="flex items-center gap-x-1"><a href="/module/masking" class="group flex items-start gap-x-3 w-full px-3 py-1.5 text-left text-sm no-underline break-words hyphens-auto overflow-hidden rounded-xl outline-offset-[-1px] cursor-pointer text-[var(--clean-fg)] hover:bg-[var(--clean-bg-muted)]"><span class="min-w-0 wrap-break-words">masking</span></a><button type="button" aria-expanded="false" aria-label="masking" class="flex shrink-0 items-center rounded-xl p-1.5 outline-offset-[-1px] cursor-pointer hover:bg-[var(--clean-bg-muted)]"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right shrink-0 transition-transform" aria-hidden="true"><path d="m9 18 6-6-6-6"></path></svg></button></div></li><li class="my-0.5"><div class="flex items-center gap-x-1"><a href="/module/pan" class="group flex items-start gap-x-3 w-full px-3 py-1.5 text-left text-sm no-underline break-words hyphens-auto overflow-hidden rounded-xl outline-offset-[-1px] cursor-pointer text-[var(--clean-fg)] hover:bg-[var(--clean-bg-muted)]"><span class="min-w-0 wrap-break-words">pan</span></a><button type="button" aria-expanded="false" aria-label="pan" class="flex shrink-0 items-center rounded-xl p-1.5 outline-offset-[-1px] cursor-pointer hover:bg-[var(--clean-bg-muted)]"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right shrink-0 transition-transform" aria-hidden="true"><path d="m9 18 6-6-6-6"></path></svg></button></div></li><li class="my-0.5"><div class="flex items-center gap-x-1"><a href="/module/storage" class="group flex items-start gap-x-3 w-full px-3 py-1.5 text-left text-sm no-underline break-words hyphens-auto overflow-hidden rounded-xl outline-offset-[-1px] cursor-pointer text-[var(--clean-fg)] hover:bg-[var(--clean-bg-muted)]"><span class="min-w-0 wrap-break-words">storage</span></a><button type="button" aria-expanded="false" aria-label="storage" class="flex shrink-0 items-center rounded-xl p-1.5 outline-offset-[-1px] cursor-pointer hover:bg-[var(--clean-bg-muted)]"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right shrink-0 transition-transform" aria-hidden="true"><path d="m9 18 6-6-6-6"></path></svg></button></div></li><li class="my-0.5"><div class="flex items-center gap-x-1"><a href="/module/types" class="group flex items-start gap-x-3 w-full px-3 py-1.5 text-left text-sm no-underline break-words hyphens-auto overflow-hidden rounded-xl outline-offset-[-1px] cursor-pointer text-[var(--clean-fg)] hover:bg-[var(--clean-bg-muted)]"><span class="min-w-0 wrap-break-words">types</span></a><button type="button" aria-expanded="false" aria-label="types" class="flex shrink-0 items-center rounded-xl p-1.5 outline-offset-[-1px] cursor-pointer hover:bg-[var(--clean-bg-muted)]"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right shrink-0 transition-transform" aria-hidden="true"><path d="m9 18 6-6-6-6"></path></svg></button></div></li><li class="my-0.5"><a href="/source" class="group flex items-start gap-x-3 w-full px-3 py-1.5 text-left text-sm no-underline break-words hyphens-auto overflow-hidden rounded-xl outline-offset-[-1px] cursor-pointer text-[var(--clean-fg)] hover:bg-[var(--clean-bg-muted)]"><span class="min-w-0 wrap-break-words">Source Files</span></a></li></ul></div></nav></div></div></aside><main class="min-w-0 px-4 md:px-8 lg:px-12"><div data-island="code-viewer" data-island-id="i0"><div class="my-4 overflow-hidden rounded-lg border border-(--clean-border) bg-(--clean-bg)"><div class="flex items-center justify-between border-b border-(--clean-border) bg-(--clean-bg-muted) px-3 py-2 text-sm"><span class="font-mono text-(--clean-fg)">index.ts</span><span class="text-xs text-(--clean-fg-muted)">typescript</span></div><div class="h-[calc(100vh-13rem)] min-h-[24rem]"><pre class="m-0 h-full overflow-auto whitespace-pre p-4 text-sm leading-relaxed text-(--clean-fg)"><code class="language-typescript">/**
+ * earnmore — Public API (PCI-DSS v4.0 / NIST / ISO / CSF 2.0 compliant)
+ *
+ * ## Key Rotation (NIST SP 800-57 / ISO 11568-1)
+ *
+ * Every generated card records a `keyId`. When rotating passphrases:
+ *
+ * ```typescript
+ * // Old cards were issued under keyId &quot;k1&quot;
+ * const oldClient = new EarnmoreClient(oldPasskey, { keyId: &quot;k1&quot; });
+ *
+ * // New cards are issued under keyId &quot;k2&quot;
+ * const newClient = new EarnmoreClient(newPasskey, { keyId: &quot;k2&quot; });
+ *
+ * // Validate old card: look up stored keyId, pick the right client
+ * oldClient.validateCvv(pan, expiry, cvv); // uses keyId &quot;k1&quot;
+ * newClient.validateCvv(pan, expiry, cvv); // uses keyId &quot;k2&quot;
+ * ```
+ *
+ * ## Key Check Value (ISO 11568-2)
+ *
+ * Verify the correct passkey is loaded at startup:
+ * ```typescript
+ * const client = new EarnmoreClient(passkey, { keyId: &quot;k1&quot; });
+ * const kcv = client.getKCV(); // e.g. &quot;a3f2c1&quot;
+ * // Compare kcv to the expected value stored in your configuration.
+ * ```
+ *
+ * ## Cryptoperiod (NIST SP 800-57 §5.3.6)
+ *
+ * ```typescript
+ * const client = new EarnmoreClient(passkey, {
+ *   keyCreatedAt: new Date(&quot;2025-01-01&quot;),
+ * });
+ * if (client.isKeyExpired()) { // checks 2-year NIST limit
+ *   // Rotate passkey and reissue with new keyId
+ * }
+ * ```
+ *
+ * ## Audit Events (CSF 2.0 DE.AE-02 / ISO 27001:2022 A.8.15)
+ *
+ * ```typescript
+ * const client = new EarnmoreClient(passkey, {
+ *   onEvent: (event) => myAuditLogger.log(event),
+ * });
+ * // Fires: key_initialized, card_generated, cvv_valid/invalid, pan_encrypted/decrypted, key_destroyed
+ * ```
+ *
+ * ## PCI-DSS compliance reminders
+ *
+ * - DO NOT store card.cvv — it is SAD (PCI-DSS Req 3.3.1).
+ *   Call redactCardResult(card) before saving to any persistent store.
+ * - DO store card.keyId — required for CVV validation after key rotation.
+ * - DO NOT store the PAN in plaintext — use encryptPAN() (Req 3.4.1).
+ * - The CVV passkey and the PAN encryption key MUST be different secrets
+ *   (PCI-DSS Req 3.7.5).
+ */
+
+export {
+  CustomerInfo,
+  CustomerAddress,
+  IdDocument,
+  IdType,
+  CardResult,
+  StorableCardData,
+  EncryptedPAN,
+  ComplianceConfig,
+  EarnmoreEvent,
+  EarnmoreEventType,
+  ALLOWED_PREFIXES,
+  AllowedPrefix,
+  PCI_DSS_PBKDF2_ITERATIONS,
+  isValidUUID,
+  NIST_HMAC_KEY_MAX_YEARS,
+} from &quot;./types&quot;;
+
+export { luhnValid } from &quot;./pan&quot;;
+export { parseExpiry } from &quot;./expiry&quot;;
+export {
+  deriveHmacKey,
+  generateCvvFromKey,
+  validateCvvFromKey,
+  generateDynamicCvvFromKey,
+  validateDynamicCvvFromKey,
+  generateKCV,
+} from &quot;./cvv&quot;;
+export { maskPAN, redactCardResult } from &quot;./masking&quot;;
+export { encryptPAN, decryptPAN, generateEncryptionKey } from &quot;./storage&quot;;
+
+import { customerFingerprint } from &quot;./hash&quot;;
+import { generatePAN } from &quot;./pan&quot;;
+import { generateExpiry } from &quot;./expiry&quot;;
+import {
+  generateCvv,
+  deriveHmacKey,
+  generateCvvFromKey,
+  validateCvvFromKey,
+  generateDynamicCvvFromKey,
+  validateDynamicCvvFromKey,
+  generateKCV,
+} from &quot;./cvv&quot;;
+import { maskPAN, redactCardResult } from &quot;./masking&quot;;
+import { encryptPAN, decryptPAN } from &quot;./storage&quot;;
+import {
+  CustomerInfo,
+  CardResult,
+  ComplianceConfig,
+  StorableCardData,
+  EncryptedPAN,
+  EarnmoreEvent,
+  PCI_DSS_PBKDF2_ITERATIONS,
+  isValidUUID,
+  NIST_HMAC_KEY_MAX_YEARS,
+} from &quot;./types&quot;;
+
+/**
+ * Generates a unique closed-loop reward card (PAN + expiry + CVV + keyId)
+ * from customer identity data.
+ *
+ * Every call produces a **different** PAN even for the same customer,
+ * because a CSPRNG salt is mixed into the hash before digit generation.
+ *
+ * ⚠️ The returned `cvv` is SAD — do not persist it.
+ *    Store `keyId` alongside the card record for future validation.
+ *    Call `redactCardResult()` before saving.
+ *
+ * @param customer  Full customer identity information
+ * @param passkey   Secret passkey (≥16 chars) for CVV HMAC key derivation.
+ *                  Must be distinct from any PAN encryption key.
+ * @param config    Optional compliance config (pbkdf2Iterations, keyId, onEvent)
+ */
+export function generate(
+  customer: CustomerInfo,
+  passkey: string,
+  config: ComplianceConfig,
+): CardResult {
+  const fingerprint = customerFingerprint(customer);
+  const { pan, seedBuffer } = generatePAN(fingerprint);
+  const expiry = generateExpiry(seedBuffer);
+  const keyId = config.keyId;
+
+  if (!isValidUUID(keyId)) {
+    throw new Error(`keyId must be a valid UUID.`);
+  }
+
+  const cvv = generateCvv(pan, expiry, passkey, config);
+  return { pan, expiry, cvv, keyId };
+}
+
+/** Re-export validateCvv and EMVCo dynamic CVV functions from cvv module */
+export { validateCvv, generateDynamicCvv, validateDynamicCvv } from &quot;./cvv&quot;;
+
+/** Re-export GDPR scrubCustomerData from hash module */
+export { scrubCustomerData } from &quot;./hash&quot;;
+
+/**
+ * A stateful client that derives the PBKDF2 HMAC key once at construction
+ * and caches it for fast repeated operations.
+ *
+ * Implements:
+ *  - Key versioning (NIST SP 800-57 / ISO 11568-1): `keyId` in constructor
+ *  - Key Check Value (ISO 11568-2): `getKCV()`
+ *  - Cryptoperiod enforcement (NIST SP 800-57 §5.3.6): `isKeyExpired()`
+ *  - Audit event hooks (CSF 2.0 DE.AE-02 / ISO 27001:2022 A.8.15): `onEvent`
+ *  - Secure key zeroing on decommission: `destroy()`
+ */
+export class EarnmoreClient {
+  private derivedKey: Buffer;
+  private destroyed: boolean = false;
+  private readonly keyId: string;
+  private readonly keyCreatedAt: Date;
+  private readonly onEvent?: (event: EarnmoreEvent) => void;
+
+  /**
+   * @param passkey  Secret passkey string (≥16 chars)
+   * @param config   Optional compliance config:
+   *   - `pbkdf2Iterations`: PBKDF2 rounds (default: PCI_DSS_PBKDF2_ITERATIONS)
+   *   - `keyId`: Key identifier for HMAC message (default: DEFAULT_KEY_ID)
+   *   - `keyCreatedAt`: Key provisioning date (default: now; used by isKeyExpired())
+   *   - `onEvent`: Audit event callback (CSF 2.0 / ISO 27001 A.8.15)
+   */
+  constructor(passkey: string, config: ComplianceConfig) {
+    const iterations = config.pbkdf2Iterations ?? PCI_DSS_PBKDF2_ITERATIONS;
+    this.keyId = config.keyId;
+
+    if (!isValidUUID(this.keyId)) {
+      throw new Error(`keyId must be a valid UUID.`);
+    }
+
+    this.keyCreatedAt = config.keyCreatedAt ?? new Date();
+    this.onEvent = config.onEvent;
+
+    this.derivedKey = deriveHmacKey(passkey, iterations);
+    this.emit({ type: &quot;key_initialized&quot;, timestamp: new Date(), keyId: this.keyId });
+  }
+
+  private assertNotDestroyed(): void {
+    if (this.destroyed) {
+      throw new Error(&quot;EarnmoreClient has been destroyed. Create a new instance.&quot;);
+    }
+  }
+
+  private emit(event: EarnmoreEvent): void {
+    try {
+      this.onEvent?.(event);
+    } catch { }
+  }
+
+  /**
+   * Generates a unique card from customer identity data.
+   * CVV is derived using the cached HMAC key and this client's keyId.
+   *
+   * ⚠️ Store card.keyId alongside the card record — required for validation
+   *    after key rotation (NIST SP 800-57 / ISO 11568-1).
+   */
+  generate(customer: CustomerInfo): CardResult {
+    this.assertNotDestroyed();
+    const fingerprint = customerFingerprint(customer);
+    const { pan, seedBuffer } = generatePAN(fingerprint);
+    const expiry = generateExpiry(seedBuffer);
+    const cvv = generateCvvFromKey(pan, expiry, this.derivedKey, this.keyId);
+    this.emit({
+      type: &quot;card_generated&quot;,
+      timestamp: new Date(),
+      keyId: this.keyId,
+      maskedPan: maskPAN(pan),
+    });
+    return { pan, expiry, cvv, keyId: this.keyId };
+  }
+
+  /**
+   * Validates a CVV using this client's cached HMAC key and keyId.
+   * Uses constant-time comparison — no PBKDF2 per call.
+   *
+   * For cards issued under a different keyId, use the corresponding
+   * EarnmoreClient instance (with the matching passkey and keyId).
+   */
+  validateCvv(pan: string, expiry: string, cvv: string): boolean {
+    this.assertNotDestroyed();
+    const isValid = validateCvvFromKey(pan, expiry, this.derivedKey, cvv, this.keyId);
+    this.emit({
+      type: isValid ? &quot;cvv_valid&quot; : &quot;cvv_invalid&quot;,
+      timestamp: new Date(),
+      keyId: this.keyId,
+      maskedPan: maskPAN(pan),
+    });
+    return isValid;
+  }
+
+  /**
+   * Generates a dynamic CVV (dCVV) using this client's cached HMAC key.
+   * EMVCo cryptograms bind an Application Transaction Counter (ATC) to the message.
+   */
+  generateDynamicCvv(pan: string, expiry: string, atc: number): string {
+    this.assertNotDestroyed();
+    const dcvv = generateDynamicCvvFromKey(pan, expiry, atc, this.derivedKey, this.keyId);
+    this.emit({
+      type: &quot;card_generated&quot;,
+      timestamp: new Date(),
+      keyId: this.keyId,
+      maskedPan: maskPAN(pan),
+    });
+    return dcvv;
+  }
+
+  /**
+   * Validates a dynamic CVV (dCVV) using this client's cached HMAC key.
+   */
+  validateDynamicCvv(pan: string, expiry: string, atc: number, dcvv: string): boolean {
+    this.assertNotDestroyed();
+    const isValid = validateDynamicCvvFromKey(pan, expiry, atc, this.derivedKey, dcvv, this.keyId);
+    this.emit({
+      type: isValid ? &quot;cvv_valid&quot; : &quot;cvv_invalid&quot;,
+      timestamp: new Date(),
+      keyId: this.keyId,
+      maskedPan: maskPAN(pan),
+    });
+    return isValid;
+  }
+
+  /**
+   * Returns the Key Check Value (KCV) for this client's derived key.
+   *
+   * The KCV is a non-secret 6-character hex fingerprint (ISO 11568-2).
+   * Store it alongside your key configuration and verify on startup to
+   * confirm the correct passkey was loaded.
+   *
+   * @returns 6-character hex KCV (e.g. &quot;a3f2c1&quot;)
+   */
+  getKCV(): string {
+    this.assertNotDestroyed();
+    return generateKCV(this.derivedKey);
+  }
+
+  /**
+   * Returns the key identifier this client was initialized with.
+   * Store alongside card records for key rotation support.
+   */
+  getKeyId(): string {
+    return this.keyId;
+  }
+
+  /**
+   * Checks whether this key has exceeded its recommended cryptoperiod.
+   *
+   * Per NIST SP 800-57 Part 1 Rev.5 §5.3.6, HMAC authentication keys
+   * should not be used beyond 2 years (NIST_HMAC_KEY_MAX_YEARS).
+   *
+   * @param maxAgeYears  Maximum key age in years. Default: NIST_HMAC_KEY_MAX_YEARS (2)
+   * @returns            true if the key age exceeds maxAgeYears
+   */
+  isKeyExpired(maxAgeYears: number = NIST_HMAC_KEY_MAX_YEARS): boolean {
+    const maxMs = maxAgeYears * 365.25 * 24 * 60 * 60 * 1000;
+    return Date.now() - this.keyCreatedAt.getTime() > maxMs;
+  }
+
+  /**
+   * Encrypts a PAN for at-rest storage (AES-256-GCM).
+   *
+   * @param pan            16-digit PAN
+   * @param encryptionKey  32-byte key — MUST be different from the CVV passkey
+   *                       (PCI-DSS Req 3.7.5)
+   */
+  encryptPAN(pan: string, encryptionKey: Buffer): EncryptedPAN {
+    this.assertNotDestroyed();
+    const result = encryptPAN(pan, encryptionKey);
+    this.emit({
+      type: &quot;pan_encrypted&quot;,
+      timestamp: new Date(),
+      keyId: this.keyId,
+      maskedPan: maskPAN(pan),
+    });
+    return result;
+  }
+
+  /**
+   * Decrypts an EncryptedPAN.
+   *
+   * @param encrypted      Result from encryptPAN()
+   * @param encryptionKey  The same 32-byte key used for encryption
+   */
+  decryptPAN(encrypted: EncryptedPAN, encryptionKey: Buffer): string {
+    this.assertNotDestroyed();
+    const pan = decryptPAN(encrypted, encryptionKey);
+    this.emit({
+      type: &quot;pan_decrypted&quot;,
+      timestamp: new Date(),
+      keyId: this.keyId,
+      maskedPan: maskPAN(pan),
+    });
+    return pan;
+  }
+
+  /**
+   * Masks a PAN per PCI-DSS Req 3.5.
+   * Returns first 6 + 6 masked chars + last 4.
+   */
+  maskPAN(pan: string): string {
+    return maskPAN(pan);
+  }
+
+  /**
+   * Strips CVV (SAD) from a CardResult, returning a StorableCardData object
+   * safe to persist per PCI-DSS Req 3.3.1.
+   * The keyId is preserved in StorableCardData for future validation.
+   */
+  redactCardResult(result: CardResult): StorableCardData {
+    return redactCardResult(result);
+  }
+
+  /**
+   * Zeros the cached derived key and marks this client as destroyed.
+   * Call this when the client will no longer be used to clear key material
+   * from process memory.
+   */
+  destroy(): void {
+    if (!this.destroyed) {
+      this.derivedKey.fill(0);
+      this.destroyed = true;
+      this.emit({ type: &quot;key_destroyed&quot;, timestamp: new Date(), keyId: this.keyId });
+    }
+  }
+}
+</code></pre></div></div></div></main></div><footer><style>[data-island='theme-toggle'] { display: none !important; } p:has(+ p img[alt='PCI-DSS']) { text-align: center !important; } p:has(img[alt='PCI-DSS']) { display: flex; flex-direction: row; justify-content: center; align-items: center; gap: 16px; flex-wrap: wrap; margin-top: 0 !important; } img[alt='PCI-DSS'] { height: 72px !important; width: auto !important; margin: 0 !important; } img[alt='EMVCo'] { height: 88px !important; width: auto !important; margin: 0 !important; } img[alt='NIST'], img[alt='GDPR'], img[alt='HIPAA'] { height: 80px !important; width: auto !important; margin: 0 !important; }</style><script>document.documentElement.dataset.theme = 'light'; localStorage.setItem('theme', 'light');</script></footer></div><script type="application/json" data-island-props>{"i0":{"language":"typescript","filename":"index.ts"},"i1":{"basePath":"/","searchIndexUrl":"/_assets/search-index.mskmqy6o-e384ac7b.json"},"i2":{},"i3":{},"i4":{"nav":[{"label":"Home","slug":"","order":-1},{"label":"cvv","slug":"module/cvv","children":[{"label":"deriveHmacKey","slug":"module/cvv/derivehmackey","group":"cvv"},{"label":"generateCvv","slug":"module/cvv/generatecvv","group":"cvv"},{"label":"generateCvvFromKey","slug":"module/cvv/generatecvvfromkey","group":"cvv"},{"label":"generateDynamicCvv","slug":"module/cvv/generatedynamiccvv","group":"cvv"},{"label":"generateDynamicCvvFromKey","slug":"module/cvv/generatedynamiccvvfromkey","group":"cvv"},{"label":"generateKCV","slug":"module/cvv/generatekcv","group":"cvv"},{"label":"validateCvv","slug":"module/cvv/validatecvv","group":"cvv"},{"label":"validateCvvFromKey","slug":"module/cvv/validatecvvfromkey","group":"cvv"},{"label":"validateDynamicCvv","slug":"module/cvv/validatedynamiccvv","group":"cvv"},{"label":"validateDynamicCvvFromKey","slug":"module/cvv/validatedynamiccvvfromkey","group":"cvv"}],"deepExpand":true},{"label":"expiry","slug":"module/expiry","children":[{"label":"generateExpiry","slug":"module/expiry/generateexpiry","group":"expiry"},{"label":"parseExpiry","slug":"module/expiry/parseexpiry","group":"expiry"}],"deepExpand":true},{"label":"hash","slug":"module/hash","children":[{"label":"HmacDrbg","slug":"module/hash/hmacdrbg","group":"hash"},{"label":"customerFingerprint","slug":"module/hash/customerfingerprint","group":"hash"},{"label":"scrubCustomerData","slug":"module/hash/scrubcustomerdata","group":"hash"},{"label":"validateBirthPlace","slug":"module/hash/validatebirthplace","group":"hash"}],"deepExpand":true},{"label":"index","slug":"module/index","children":[{"label":"EarnmoreClient","slug":"module/index/earnmoreclient","group":"index"},{"label":"generate","slug":"module/index/generate","group":"index"}],"deepExpand":true},{"label":"masking","slug":"module/masking","children":[{"label":"maskPAN","slug":"module/masking/maskpan","group":"masking"},{"label":"redactCardResult","slug":"module/masking/redactcardresult","group":"masking"}],"deepExpand":true},{"label":"pan","slug":"module/pan","children":[{"label":"PanResult","slug":"module/pan/panresult","group":"pan"},{"label":"generatePAN","slug":"module/pan/generatepan","group":"pan"},{"label":"luhnCheckDigit","slug":"module/pan/luhncheckdigit","group":"pan"},{"label":"luhnValid","slug":"module/pan/luhnvalid","group":"pan"}],"deepExpand":true},{"label":"storage","slug":"module/storage","children":[{"label":"decryptPAN","slug":"module/storage/decryptpan","group":"storage"},{"label":"encryptPAN","slug":"module/storage/encryptpan","group":"storage"},{"label":"generateEncryptionKey","slug":"module/storage/generateencryptionkey","group":"storage"}],"deepExpand":true},{"label":"types","slug":"module/types","children":[{"label":"CardResult","slug":"module/types/cardresult","group":"types"},{"label":"ComplianceConfig","slug":"module/types/complianceconfig","group":"types"},{"label":"CustomerAddress","slug":"module/types/customeraddress","group":"types"},{"label":"CustomerInfo","slug":"module/types/customerinfo","group":"types"},{"label":"EarnmoreEvent","slug":"module/types/earnmoreevent","group":"types"},{"label":"EncryptedPAN","slug":"module/types/encryptedpan","group":"types"},{"label":"IdDocument","slug":"module/types/iddocument","group":"types"},{"label":"StorableCardData","slug":"module/types/storablecarddata","group":"types"},{"label":"AllowedPrefix","slug":"module/types/allowedprefix","group":"types"},{"label":"EarnmoreEventType","slug":"module/types/earnmoreeventtype","group":"types"},{"label":"IdType","slug":"module/types/idtype","group":"types"},{"label":"ALLOWED_PREFIXES","slug":"module/types/allowed-prefixes","group":"types"},{"label":"NIST_HMAC_KEY_MAX_YEARS","slug":"module/types/nist-hmac-key-max-years","group":"types"},{"label":"PCI_DSS_PBKDF2_ITERATIONS","slug":"module/types/pci-dss-pbkdf2-iterations","group":"types"},{"label":"UUID_REGEX","slug":"module/types/uuid-regex","group":"types"},{"label":"isValidUUID","slug":"module/types/isvaliduuid","group":"types"}],"deepExpand":true},{"label":"Source Files","slug":"source"}],"currentSlug":"source/index-ts","siteName":"EarnMore","basePath":"/","collapsibleGroups":[]},"i5":{"nav":[{"label":"Home","slug":"","order":-1},{"label":"cvv","slug":"module/cvv","children":[{"label":"deriveHmacKey","slug":"module/cvv/derivehmackey","group":"cvv"},{"label":"generateCvv","slug":"module/cvv/generatecvv","group":"cvv"},{"label":"generateCvvFromKey","slug":"module/cvv/generatecvvfromkey","group":"cvv"},{"label":"generateDynamicCvv","slug":"module/cvv/generatedynamiccvv","group":"cvv"},{"label":"generateDynamicCvvFromKey","slug":"module/cvv/generatedynamiccvvfromkey","group":"cvv"},{"label":"generateKCV","slug":"module/cvv/generatekcv","group":"cvv"},{"label":"validateCvv","slug":"module/cvv/validatecvv","group":"cvv"},{"label":"validateCvvFromKey","slug":"module/cvv/validatecvvfromkey","group":"cvv"},{"label":"validateDynamicCvv","slug":"module/cvv/validatedynamiccvv","group":"cvv"},{"label":"validateDynamicCvvFromKey","slug":"module/cvv/validatedynamiccvvfromkey","group":"cvv"}],"deepExpand":true},{"label":"expiry","slug":"module/expiry","children":[{"label":"generateExpiry","slug":"module/expiry/generateexpiry","group":"expiry"},{"label":"parseExpiry","slug":"module/expiry/parseexpiry","group":"expiry"}],"deepExpand":true},{"label":"hash","slug":"module/hash","children":[{"label":"HmacDrbg","slug":"module/hash/hmacdrbg","group":"hash"},{"label":"customerFingerprint","slug":"module/hash/customerfingerprint","group":"hash"},{"label":"scrubCustomerData","slug":"module/hash/scrubcustomerdata","group":"hash"},{"label":"validateBirthPlace","slug":"module/hash/validatebirthplace","group":"hash"}],"deepExpand":true},{"label":"index","slug":"module/index","children":[{"label":"EarnmoreClient","slug":"module/index/earnmoreclient","group":"index"},{"label":"generate","slug":"module/index/generate","group":"index"}],"deepExpand":true},{"label":"masking","slug":"module/masking","children":[{"label":"maskPAN","slug":"module/masking/maskpan","group":"masking"},{"label":"redactCardResult","slug":"module/masking/redactcardresult","group":"masking"}],"deepExpand":true},{"label":"pan","slug":"module/pan","children":[{"label":"PanResult","slug":"module/pan/panresult","group":"pan"},{"label":"generatePAN","slug":"module/pan/generatepan","group":"pan"},{"label":"luhnCheckDigit","slug":"module/pan/luhncheckdigit","group":"pan"},{"label":"luhnValid","slug":"module/pan/luhnvalid","group":"pan"}],"deepExpand":true},{"label":"storage","slug":"module/storage","children":[{"label":"decryptPAN","slug":"module/storage/decryptpan","group":"storage"},{"label":"encryptPAN","slug":"module/storage/encryptpan","group":"storage"},{"label":"generateEncryptionKey","slug":"module/storage/generateencryptionkey","group":"storage"}],"deepExpand":true},{"label":"types","slug":"module/types","children":[{"label":"CardResult","slug":"module/types/cardresult","group":"types"},{"label":"ComplianceConfig","slug":"module/types/complianceconfig","group":"types"},{"label":"CustomerAddress","slug":"module/types/customeraddress","group":"types"},{"label":"CustomerInfo","slug":"module/types/customerinfo","group":"types"},{"label":"EarnmoreEvent","slug":"module/types/earnmoreevent","group":"types"},{"label":"EncryptedPAN","slug":"module/types/encryptedpan","group":"types"},{"label":"IdDocument","slug":"module/types/iddocument","group":"types"},{"label":"StorableCardData","slug":"module/types/storablecarddata","group":"types"},{"label":"AllowedPrefix","slug":"module/types/allowedprefix","group":"types"},{"label":"EarnmoreEventType","slug":"module/types/earnmoreeventtype","group":"types"},{"label":"IdType","slug":"module/types/idtype","group":"types"},{"label":"ALLOWED_PREFIXES","slug":"module/types/allowed-prefixes","group":"types"},{"label":"NIST_HMAC_KEY_MAX_YEARS","slug":"module/types/nist-hmac-key-max-years","group":"types"},{"label":"PCI_DSS_PBKDF2_ITERATIONS","slug":"module/types/pci-dss-pbkdf2-iterations","group":"types"},{"label":"UUID_REGEX","slug":"module/types/uuid-regex","group":"types"},{"label":"isValidUUID","slug":"module/types/isvaliduuid","group":"types"}],"deepExpand":true},{"label":"Source Files","slug":"source"}],"currentSlug":"source/index-ts","basePath":"/","collapsibleGroups":[]}}</script><script type="module">(function(){var map={"theme-toggle":"/_islands/theme-toggle-HBNNWKD4.js","settings":"/_islands/settings-N75F5GSY.js","code-viewer":"/_islands/code-viewer-2C6WUEBP.js","embed":"/_islands/embed-F2HJ2C2Y.js","playground":"/_islands/playground-QFIGPJXM.js","tabs":"/_islands/tabs-NRSQKCSU.js","sidebar":"/_islands/sidebar-7OFOPIWL.js","mobile-nav":"/_islands/mobile-nav-4KOMS72X.js","toc":"/_islands/toc-IP5WMB2H.js","toc-mobile":"/_islands/toc-mobile-BLFDGSN7.js","cmdk":"/_islands/cmdk-LGASLAKS.js","code-tabs":"/_islands/code-tabs-AGGTFMO6.js","copy-btn":"/_islands/copy-btn-GS2K7BV4.js","copy-page":"/_islands/copy-page-P3LGRLLN.js"};var seen=new Set();document.querySelectorAll('[data-island]').forEach(function(el){seen.add(el.getAttribute('data-island'));});seen.forEach(function(name){var src=map[name];if(src){import(src);}});})();</script><script>(function(){function flash(h){var b=h.querySelector('[data-heading-anchor]');if(!b)return;b.setAttribute('data-copied','');window.setTimeout(function(){b.removeAttribute('data-copied');},3000);}function onClick(e){var t=e.target;if(!t||!t.closest)return;if(t.closest('a'))return;var h=t.closest('h1[id],h2[id],h3[id],h4[id],h5[id],h6[id]');if(!h)return;var id=h.id;if(!id)return;var iconOnly=!!t.closest('[data-heading-anchor]');if(!iconOnly){if(location.hash.slice(1)===id){h.scrollIntoView();}else{location.hash=id;}}try{var url=location.origin+location.pathname+location.search+'#'+id;if(navigator.clipboard){navigator.clipboard.writeText(url).then(function(){flash(h);}).catch(function(){});}}catch(_){}}document.addEventListener('click',onClick);}());</script><script>(function(){var IDLE=700;var timers=new WeakMap();function onScroll(e){var el=e.target;if(el===document||el===window)el=document.documentElement;if(!el||!el.classList)return;el.classList.add('clean-scrolling');var prev=timers.get(el);if(prev)window.clearTimeout(prev);timers.set(el,window.setTimeout(function(){el.classList.remove('clean-scrolling');},IDLE));}document.addEventListener('scroll',onScroll,true);}());</script></body></html>
