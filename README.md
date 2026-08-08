@@ -26,6 +26,63 @@ Built from the ground up for financial-grade security, EarnMore is designed to e
 - **Strict PII Data Minimization**: Protects against memory heap-dump leaks by proactively providing memory-scrubbing utilities (`scrubCustomerData()`) that overwrite Personally Identifiable Information (PII) with zero-bytes in-memory, mitigating risks before V8 garbage collection occurs.
 - **Zero External Dependencies**: Operates entirely utilizing Node.js's native `crypto` module, completely eliminating third-party NPM supply chain vulnerabilities (NIST SSDF compliant) and ensuring a drastically reduced attack surface.
 
+## Basic Usage
+
+```typescript
+import { EarnmoreClient, CustomerInfo } from "earnmore";
+
+// Secure database key string
+const databaseKey = "your-32-byte-secure-database-key";
+
+// Your secure master passkey string
+const masterPassKey = "your-secure-master-passkey-here!";
+
+// Initialize the client with your secure master passkey
+const client = new EarnmoreClient(masterPassKey, {
+  // Attach a key ID for seamless future key rotation lookups
+  keyId: "550e8400-e29b-41d4-a716-446655440000"
+});
+
+// Generate a new card deterministically from customer data
+const customer: CustomerInfo = {
+  firstName: "Jane",
+  lastName: "Doe",
+  middleName: "",
+  birthday: new Date("1990-01-01"),
+  birthPlace: "New York",
+  idDocument: {
+    type: "passport",
+    number: "A12345678"
+  },
+  address: {
+    line1: "123 Main St",
+    city: "New York",
+    country: "USA",
+    zipCode: "10001"
+  }
+};
+
+const card = client.generate(customer);
+console.log(card.pan);    // e.g., "4321098765432109"
+console.log(card.expiry); // e.g., "11/29"
+console.log(card.cvv);    // e.g., "7821"
+
+// Validate the CVV during a transaction
+const isValid = client.validateCvv(card.pan, card.expiry, card.cvv);
+console.log(isValid); // true
+
+// Redact sensitive data (SAD) for safe database storage
+const storableData = client.redactCardResult(card);
+// {
+//    maskedPan: "432109xxxxxx2109",
+//    expiry: "11/29",
+//    keyId: "550e8400-e29b-41d4-a716-446655440000"
+// }
+
+// Encrypt the full PAN for PCI-DSS compliant at-rest storage
+const encrypted = client.encryptPAN(card.pan, Buffer.from(databaseKey));
+```
+
 ## Standards & Compliance
 
 EarnMore is designed to meet strict regulatory and cryptographic standards:
