@@ -1,9 +1,16 @@
 {
-  "name": "earnmore",
+  "name": "@nathannestein/earnmore",
   "version": "1.0.0",
   "description": "Closed-loop reward card network library; generates 16-digit PAN, expiry date, and HMAC-based CVV from customer identity data.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nthnn/earnmore.git"
+  },
   "scripts": {
     "build": "tsc",
     "test": "jest",
@@ -23,8 +30,9 @@
     "reward",
     "closed-loop"
   ],
-  "author": "",
-  "license": "MIT",
+  "author": "Nathanne Isip <nathanne@nthnn.dev>",
+  "license": "AGPL",
+  "type": "module",
   "devDependencies": {
     "@clean-jsdoc-theme/typedoc": "^5.1.1",
     "@types/jest": "^29.5.12",
