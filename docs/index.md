@@ -1,5 +1,5 @@
 ---
-title: earnmore
+title: "@nathannestein/earnmore"
 kind: index
 ---
 
