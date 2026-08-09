@@ -56,7 +56,7 @@
  *   (PCI-DSS Req 3.7.5).
  */
 
-export {
+export type {
   CustomerInfo,
   CustomerAddress,
   IdDocument,
@@ -67,8 +67,11 @@ export {
   ComplianceConfig,
   EarnmoreEvent,
   EarnmoreEventType,
-  ALLOWED_PREFIXES,
   AllowedPrefix,
+} from "./types";
+
+export {
+  ALLOWED_PREFIXES,
   PCI_DSS_PBKDF2_ITERATIONS,
   isValidUUID,
   NIST_HMAC_KEY_MAX_YEARS,

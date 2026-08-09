@@ -39,5 +39,5 @@ jobs:
       run: |
         for file in examples/*.ts; do
           echo "Running $file..."
-          npx ts-node "$file"
+          npx tsx "$file"
         done

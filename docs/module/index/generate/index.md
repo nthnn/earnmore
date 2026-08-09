@@ -15,7 +15,7 @@ description: Generates a unique closed-loop reward card (PAN + expiry + CVV + ke
 ): CardResult"
 />
 
-<SourceLink href="/source/index-ts/#L132" label="index.ts:132" />
+<SourceLink href="/source/index-ts/#L135" label="index.ts:135" />
 
 Generates a unique closed-loop reward card (PAN + expiry + CVV + keyId) from customer identity data.
 

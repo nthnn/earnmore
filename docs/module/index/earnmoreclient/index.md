@@ -7,7 +7,7 @@ description: "A stateful client that derives the PBKDF2 HMAC key once at constru
 
 # EarnmoreClient
 
-<SourceLink href="/source/index-ts/#L167" label="index.ts:167" />
+<SourceLink href="/source/index-ts/#L170" label="index.ts:170" />
 
 A stateful client that derives the PBKDF2 HMAC key once at construction and caches it for fast repeated operations.
 
@@ -56,7 +56,7 @@ Implements:
 ): string"
 />
 
-<MemberMeta sourceHref="/source/index-ts/#L342" sourceLabel="index.ts:342" />
+<MemberMeta sourceHref="/source/index-ts/#L345" sourceLabel="index.ts:345" />
 
 Decrypts an EncryptedPAN.
 
@@ -71,7 +71,7 @@ Decrypts an EncryptedPAN.
 
 <MemberHeading id="destroy" depth="3" name="destroy" sig="destroy(): void" />
 
-<MemberMeta sourceHref="/source/index-ts/#L376" sourceLabel="index.ts:376" />
+<MemberMeta sourceHref="/source/index-ts/#L379" sourceLabel="index.ts:379" />
 
 Zeros the cached derived key and marks this client as destroyed. Call this when the client will no longer be used to clear key material from process memory.
 
@@ -81,7 +81,7 @@ Zeros the cached derived key and marks this client as destroyed. Call this when 
 
 <MemberHeading id="encryptpan" depth="3" name="encryptPAN" sig="encryptPAN(pan: string, encryptionKey: Buffer): EncryptedPAN" />
 
-<MemberMeta sourceHref="/source/index-ts/#L324" sourceLabel="index.ts:324" />
+<MemberMeta sourceHref="/source/index-ts/#L327" sourceLabel="index.ts:327" />
 
 Encrypts a PAN for at-rest storage (AES-256-GCM).
 
@@ -96,7 +96,7 @@ Encrypts a PAN for at-rest storage (AES-256-GCM).
 
 <MemberHeading id="generate" depth="3" name="generate" sig="generate(customer: CustomerInfo): CardResult" />
 
-<MemberMeta sourceHref="/source/index-ts/#L216" sourceLabel="index.ts:216" />
+<MemberMeta sourceHref="/source/index-ts/#L219" sourceLabel="index.ts:219" />
 
 Generates a unique card from customer identity data. CVV is derived using the cached HMAC key and this client's keyId.
 
@@ -121,7 +121,7 @@ Generates a unique card from customer identity data. CVV is derived using the ca
 ): string"
 />
 
-<MemberMeta sourceHref="/source/index-ts/#L254" sourceLabel="index.ts:254" />
+<MemberMeta sourceHref="/source/index-ts/#L257" sourceLabel="index.ts:257" />
 
 Generates a dynamic CVV (dCVV) using this client's cached HMAC key. EMVCo cryptograms bind an Application Transaction Counter (ATC) to the message.
 
@@ -137,7 +137,7 @@ Generates a dynamic CVV (dCVV) using this client's cached HMAC key. EMVCo crypto
 
 <MemberHeading id="getkcv" depth="3" name="getKCV" sig="getKCV(): string" />
 
-<MemberMeta sourceHref="/source/index-ts/#L290" sourceLabel="index.ts:290" />
+<MemberMeta sourceHref="/source/index-ts/#L293" sourceLabel="index.ts:293" />
 
 Returns the Key Check Value (KCV) for this client's derived key.
 
@@ -149,7 +149,7 @@ The KCV is a non-secret 6-character hex fingerprint (ISO 11568-2). Store it alon
 
 <MemberHeading id="getkeyid" depth="3" name="getKeyId" sig="getKeyId(): string" />
 
-<MemberMeta sourceHref="/source/index-ts/#L299" sourceLabel="index.ts:299" />
+<MemberMeta sourceHref="/source/index-ts/#L302" sourceLabel="index.ts:302" />
 
 Returns the key identifier this client was initialized with. Store alongside card records for key rotation support.
 
@@ -159,7 +159,7 @@ Returns the key identifier this client was initialized with. Store alongside car
 
 <MemberHeading id="iskeyexpired" depth="3" name="isKeyExpired" sig="isKeyExpired(maxAgeYears: number): boolean" />
 
-<MemberMeta sourceHref="/source/index-ts/#L312" sourceLabel="index.ts:312" />
+<MemberMeta sourceHref="/source/index-ts/#L315" sourceLabel="index.ts:315" />
 
 Checks whether this key has exceeded its recommended cryptoperiod.
 
@@ -175,7 +175,7 @@ Per NIST SP 800-57 Part 1 Rev.5 §5.3.6, HMAC authentication keys should not be 
 
 <MemberHeading id="maskpan" depth="3" name="maskPAN" sig="maskPAN(pan: string): string" />
 
-<MemberMeta sourceHref="/source/index-ts/#L358" sourceLabel="index.ts:358" />
+<MemberMeta sourceHref="/source/index-ts/#L361" sourceLabel="index.ts:361" />
 
 Masks a PAN per PCI-DSS Req 3.5. Returns first 6 + 6 masked chars + last 4.
 
@@ -189,7 +189,7 @@ Masks a PAN per PCI-DSS Req 3.5. Returns first 6 + 6 masked chars + last 4.
 
 <MemberHeading id="redactcardresult" depth="3" name="redactCardResult" sig="redactCardResult(result: CardResult): StorableCardData" />
 
-<MemberMeta sourceHref="/source/index-ts/#L367" sourceLabel="index.ts:367" />
+<MemberMeta sourceHref="/source/index-ts/#L370" sourceLabel="index.ts:370" />
 
 Strips CVV (SAD) from a CardResult, returning a StorableCardData object safe to persist per PCI-DSS Req 3.3.1. The keyId is preserved in StorableCardData for future validation.
 
@@ -203,7 +203,7 @@ Strips CVV (SAD) from a CardResult, returning a StorableCardData object safe to 
 
 <MemberHeading id="validatecvv" depth="3" name="validateCvv" sig="validateCvv(pan: string, expiry: string, cvv: string): boolean" />
 
-<MemberMeta sourceHref="/source/index-ts/#L238" sourceLabel="index.ts:238" />
+<MemberMeta sourceHref="/source/index-ts/#L241" sourceLabel="index.ts:241" />
 
 Validates a CVV using this client's cached HMAC key and keyId. Uses constant-time comparison — no PBKDF2 per call.
 
@@ -231,7 +231,7 @@ For cards issued under a different keyId, use the corresponding EarnmoreClient i
 ): boolean"
 />
 
-<MemberMeta sourceHref="/source/index-ts/#L269" sourceLabel="index.ts:269" />
+<MemberMeta sourceHref="/source/index-ts/#L272" sourceLabel="index.ts:272" />
 
 Validates a dynamic CVV (dCVV) using this client's cached HMAC key.
 
