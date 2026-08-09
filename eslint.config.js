@@ -1,8 +1,8 @@
-const tseslint = require('typescript-eslint');
-const security = require('eslint-plugin-security');
-const eslintPluginPrettierRecommended = require('eslint-plugin-prettier/recommended');
+import tseslint from 'typescript-eslint';
+import security from 'eslint-plugin-security';
+import eslintPluginPrettierRecommended from 'eslint-plugin-prettier/recommended';
 
-module.exports = tseslint.config(
+export default tseslint.config(
   ...tseslint.configs.recommended,
   security.configs.recommended,
   eslintPluginPrettierRecommended,
