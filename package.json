@@ -1,6 +1,6 @@
 {
   "name": "@nathannestein/earnmore",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Closed-loop reward card network library; generates 16-digit PAN, expiry date, and HMAC-based CVV from customer identity data.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
